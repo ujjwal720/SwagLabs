@@ -41,8 +41,11 @@ public class AllureTest extends BaseTest {
     @Test(description = "To Test End to End flow for the Websiteddd")
     public void Test01() throws InterruptedException {
         applicatenavigate.navigateToSwagLabsSite("QA");
+        Thread.sleep(3000);
         loginsteps.LoginToApplication(testdata.username, testdata.password);
+        Thread.sleep(3000);
         softAssert.assertEquals("man","maz");
+        Thread.sleep(3000);
         softAssert.assertAll();
 
     }
