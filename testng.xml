@@ -4,11 +4,14 @@
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
         <listener class-name="Utility.Listners"/>
+        <listener class-name="Utility.JsonTestReportListener"></listener>
     </listeners>
 
     <test verbose="2" preserve-order="true" name="All Tests">
         <classes>
             <class name="TestCases.AllureTest"/>
+
+
         </classes>
     </test>
 </suite>

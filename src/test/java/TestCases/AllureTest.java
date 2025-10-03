@@ -45,8 +45,11 @@ public class AllureTest extends BaseTest {
         loginsteps.LoginToApplication(testdata.username, testdata.password);
         Thread.sleep(3000);
         softAssert.assertEquals("man","maz");
-        Thread.sleep(3000);
         softAssert.assertAll();
+        Thread.sleep(3000);
+        System.out.println("Test Failed");
+
+
 
     }
 }

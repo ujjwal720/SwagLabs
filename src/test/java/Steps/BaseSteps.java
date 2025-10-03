@@ -1,6 +1,7 @@
 package Steps;
 
 import Pages.DriverInit;
+import Utility.LogCollector;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
@@ -10,11 +11,14 @@ public class BaseSteps {
 
     public static void logMessagewithoutscreenshot(String message) {
         Allure.step(message);
+        LogCollector.addLog(message);
     }
 
     public static void logMessageWithScreenshot(String message) {
         Allure.step(message, () -> {
+            LogCollector.addLog(message);
             return attachScreenshot();
+
         });
     }
 
